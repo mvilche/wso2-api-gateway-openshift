@@ -56,7 +56,7 @@ cat /opt/custom_config/web.xml > /opt/wso2/repository/conf/tomcat/carbon/WEB-INF
 fi
 
 if [ -z $CUSTOM_JAVA_OPTS ]; then
-export CUSTOM_JAVA_OPTS=
+export $CUSTOM_JAVA_OPTS=
 fi
 echo "INICIANDO WSO2.."
 export JVM_MEM_OPTS="$CUSTOM_JAVA_OPTS -XX:MaxRAMFraction=1 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dfile.encoding=UTF8 -XX:+ExitOnOutOfMemoryError -Djava.net.preferIPv4Stack=true"

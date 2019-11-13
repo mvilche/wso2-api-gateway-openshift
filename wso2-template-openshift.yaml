@@ -2015,7 +2015,7 @@
               terminationMessagePath: /dev/termination-log
               terminationMessagePolicy: File
               volumeMounts:
-                - name: gateway-config
+                - name: wso2am-config
                   mountPath: /opt/wso2am/custom_config                 
           dnsPolicy: ClusterFirst
           restartPolicy: Always
@@ -2176,7 +2176,7 @@
                   value: wso2
                 - name: MYSQL_USER
                   value: wso2
-                - name: MYSQL_USER_PASSWORD
+                - name: MYSQL_PASSWORD
                   value: wso2                  
                 - name: MYSQL_DATABASE
                   value: wso2
@@ -2192,7 +2192,7 @@
                   - /bin/sh
                   - -i
                   - -c
-                  - mysql -h 127.0.0.1 -u $MYSQL_USER -p $MYSQL_USER_PASSWORD -D $MYSQL_DATABASE -e 'SELECT 1
+                  - mysql -h 127.0.0.1 -u $MYSQL_USER -p $MYSQL_PASSWORD -D $MYSQL_DATABASE -e 'SELECT 1'
                 failureThreshold: 3
                 initialDelaySeconds: 60
                 periodSeconds: 10
