@@ -55,6 +55,29 @@ if [ -f /opt/custom_config/web.xml ]; then
 cat /opt/custom_config/web.xml > /opt/wso2/repository/conf/tomcat/carbon/WEB-INF/web.xml
 fi
 
+if [ -f /opt/custom_config/catalina-server.xml ]; then
+cat /opt/custom_config/catalina-server.xml > /opt/wso2/repository/conf/tomcat/catalina-server.xml
+fi
+
+
+if [ -f /opt/custom_config/api-manager.xml ]; then
+cat /opt/custom_config/api-manager.xml > /opt/wso2/repository/conf/api-manager.xml
+fi
+
+
+if [ -f /opt/custom_config/site-publisher.json ]; then
+cat /opt/custom_config/site-publisher.json > /opt/wso2/repository/deployment/server/jaggeryapps/publisher/site/conf/site.json
+fi
+
+if [ -f /opt/custom_config/site-store.json ]; then
+cat /opt/custom_config/site-store.json > /opt/wso2/repository/deployment/server/jaggeryapps/store/site/conf/site.json
+fi
+
+if [ -f /opt/custom_config/site-admin.json ]; then
+cat /opt/custom_config/site-admin.json > /opt/wso2/repository/deployment/server/jaggeryapps/admin/site/conf/site.json
+fi
+
+
 if [ -z $CUSTOM_JAVA_OPTS ]; then
 export CUSTOM_JAVA_OPTS=
 fi
