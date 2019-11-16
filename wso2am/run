@@ -33,44 +33,74 @@ fi
 
 if [ -f /opt/custom_config/deployment.toml ]; then
 cat /opt/custom_config/deployment.toml > /opt/wso2/repository/conf/deployment.toml
+
+echo "COPY CUSTOM deployments.toml"
+
 fi
 
 if [ -f /opt/custom_config/master-datasources.xml ]; then
 cat /opt/custom_config/master-datasources.xml > /opt/wso2/repository/conf/datasources/master-datasources.xml
+
+echo "COPY CUSTOM master-datasources.xml"
+
 fi
 
 if [ -f /opt/custom_config/user-mgt.xml ]; then
 cat /opt/custom_config/user-mgt.xml > /opt/wso2/repository/conf/user-mgt.xml
+
+echo "COPY CUSTOM user-mgt.xml"
+
 fi
 
 if [ -f /opt/custom_config/registry.xml ]; then
 cat /opt/custom_config/registry.xml > /opt/wso2/repository/conf/registry.xml
+
+echo "COPY CUSTOM registry.xml"
+
 fi
 
 if [ -f /opt/custom_config/carbon.xml ]; then
 cat /opt/custom_config/carbon.xml > /opt/wso2/repository/conf/carbon.xml
+
+echo "COPY CUSTOM carbon.xml"
+
 fi
 
 if [ -f /opt/custom_config/web.xml ]; then
 cat /opt/custom_config/web.xml > /opt/wso2/repository/conf/tomcat/carbon/WEB-INF/web.xml
+
+echo "COPY CUSTOM web.xml"
+
 fi
 
 if [ -f /opt/custom_config/catalina-server.xml ]; then
 cat /opt/custom_config/catalina-server.xml > /opt/wso2/repository/conf/tomcat/catalina-server.xml
+
+echo "COPY CUSTOM catalina-server.xml"
+
 fi
 
 
 if [ -f /opt/custom_config/api-manager.xml ]; then
 cat /opt/custom_config/api-manager.xml > /opt/wso2/repository/conf/api-manager.xml
+
+echo "COPY CUSTOM api-manager.xml"
+
 fi
 
 
 if [ -f /opt/custom_config/site-publisher.json ]; then
 cat /opt/custom_config/site-publisher.json > /opt/wso2/repository/deployment/server/jaggeryapps/publisher/site/conf/site.json
+
+echo "COPY CUSTOM site-publisher.json"
+
 fi
 
 if [ -f /opt/custom_config/site-admin.json ]; then
 cat /opt/custom_config/site-admin.json > /opt/wso2/repository/deployment/server/jaggeryapps/admin/site/conf/site.json
+
+echo "COPY CUSTOM site-admin.json"
+
 fi
 
 
