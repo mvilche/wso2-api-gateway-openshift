@@ -66,14 +66,17 @@ fi
 
 
 if [ -f /opt/custom_config/site-publisher.json ]; then
+touch /opt/wso2/repository/deployment/server/jaggeryapps/publisher/site/conf/site.json
 cat /opt/custom_config/site-publisher.json > /opt/wso2/repository/deployment/server/jaggeryapps/publisher/site/conf/site.json
 fi
 
 if [ -f /opt/custom_config/site-store.json ]; then
+touch /opt/wso2/repository/deployment/server/jaggeryapps/store/site/conf/site.json
 cat /opt/custom_config/site-store.json > /opt/wso2/repository/deployment/server/jaggeryapps/store/site/conf/site.json
 fi
 
 if [ -f /opt/custom_config/site-admin.json ]; then
+touch /opt/wso2/repository/deployment/server/jaggeryapps/admin/site/conf/site.json
 cat /opt/custom_config/site-admin.json > /opt/wso2/repository/deployment/server/jaggeryapps/admin/site/conf/site.json
 fi
 
