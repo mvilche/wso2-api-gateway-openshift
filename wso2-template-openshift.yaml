@@ -3024,25 +3024,9 @@
         deploymentconfig: wso2am
       sessionAffinity: None
       type: ClusterIP
-
+      
+      
   - apiVersion: route.openshift.io/v1
-    kind: Route
-    metadata:
-      labels:
-        app: wso2-api-gateway
-      name: wso2am
-    spec:
-      host: ${URL}
-      port:
-        targetPort: gateway-manager-secure
-      to:
-        kind: Service
-        name: wso2am
-        weight: 100
-      wildcardPolicy: None
-      
-      
-    apiVersion: route.openshift.io/v1
     kind: Route
     metadata:
       labels:
