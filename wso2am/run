@@ -103,6 +103,13 @@ echo "COPY CUSTOM site-admin.json"
 
 fi
 
+if [ -f /opt/custom_config/axis2.xml ]; then
+cat /opt/custom_config/axis2.xml > /opt/wso2/repository/conf/axi2/axis2.xml
+
+echo "COPY CUSTOM axis2.xml"
+
+fi
+
 
 if [ -z $CUSTOM_JAVA_OPTS ]; then
 export CUSTOM_JAVA_OPTS=
